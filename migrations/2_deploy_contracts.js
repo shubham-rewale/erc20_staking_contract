@@ -1,5 +1,7 @@
 const _Alt_token = artifacts.require("Alt_token");
 const _Token_Sale = artifacts.require("Token_Sale");
+const dotenv = require("dotenv")
+dotenv.config({path: "../config.env"});
 
 module.exports = async function(deployer) {
     await deployer.deploy(_Alt_token, process.env.INITIAL_SUPPLY);
